@@ -12,12 +12,58 @@ This document outlines the complete RTL-to-GDSII flow implemented for a **High-S
 
 The **OpenLane** project directory is organized to facilitate the complete ASIC design flow. Below is a typical directory structure with a brief explanation of each component:
 ```
-RTL-to-GDSII-Flow/
-├── README.md          
-├── docs/              
-├── RTL/               
-├── Synthesis/         
-├── Floorplan/         
+Openlane/
+├── Designs/
+│   ├── usb/
+│   |   ├── config.tcl
+│   |   ├── sky130A_sky130_fd_sc_hs_config.tcl
+│   |   ├── sky130A_sky130_fd_sc_ls_config.tcl
+│   |   ├── sky130A_sky130_fd_sc_ms_config.tcl
+│   |   ├── sky130A_sky130_fd_sc_hd_config.tcl
+│   |   ├── sky130A_sky130_fd_sc_hdll_config.tcl
+│   |   ├── src/
+│   |   |   ├── usb_2p0_core.v
+├── configuration/
+│   ├── checkers.tcl
+│   ├── cts.tcl
+│   ├── floorplan.tcl
+│   ├── general.tcl
+│   ├── lvs.tcl
+│   ├── placement.tcl
+│   ├── routing.tcl
+│   ├── synthesis.tcl
+│   ├── README.md
+├── flow.tcl         
+├── clean_runs.tcl
+```
+
+
+
+
+
+
+
+
+
+
+
+config.tcl                            sky130A_sky130_fd_sc_hs_config.tcl
+runs                                  sky130A_sky130_fd_sc_ls_config.tcl
+sky130A_sky130_fd_sc_hd_config.tcl    sky130A_sky130_fd_sc_ms_config.tcl
+sky130A_sky130_fd_sc_hdll_config.tcl  src
+vsduser@vsdsquadron:~/Desktop/work/tools/openlane_working_dir/openlane/designs/usb$ ls -1
+config.tcl
+runs
+sky130A_sky130_fd_sc_hd_config.tcl
+sky130A_sky130_fd_sc_hdll_config.tcl
+sky130A_sky130_fd_sc_hs_config.tcl
+sky130A_sky130_fd_sc_ls_config.tcl
+sky130A_sky130_fd_sc_ms_config.tcl
+
+├── scripts/              
+├── configuration/               
+├── flow.tcl         
+├── clean_runs.tcl/         
 ├── Placement/
 ├── CTS/
 ├── Routing/         
