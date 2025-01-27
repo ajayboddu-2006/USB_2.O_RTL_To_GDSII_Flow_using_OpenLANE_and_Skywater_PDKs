@@ -37,42 +37,12 @@ Openlane/
 ├── clean_runs.tcl
 ```
 
+To start the OpenLANE flow, first open the terminal, and get into the openlane directory as shown below:
+#####################
+To start the OpenLANE flow, type **docker** inside the openlane directory. You can check your current directory which is shown as **OpenLANE_flow**
 
+In OpenLane, designs can be run in two primary modes:
 
-
-
-
-
-
-
-
-
-config.tcl                            sky130A_sky130_fd_sc_hs_config.tcl
-runs                                  sky130A_sky130_fd_sc_ls_config.tcl
-sky130A_sky130_fd_sc_hd_config.tcl    sky130A_sky130_fd_sc_ms_config.tcl
-sky130A_sky130_fd_sc_hdll_config.tcl  src
-vsduser@vsdsquadron:~/Desktop/work/tools/openlane_working_dir/openlane/designs/usb$ ls -1
-config.tcl
-runs
-sky130A_sky130_fd_sc_hd_config.tcl
-sky130A_sky130_fd_sc_hdll_config.tcl
-sky130A_sky130_fd_sc_hs_config.tcl
-sky130A_sky130_fd_sc_ls_config.tcl
-sky130A_sky130_fd_sc_ms_config.tcl
-
-├── scripts/              
-├── configuration/               
-├── flow.tcl         
-├── clean_runs.tcl/         
-├── Placement/
-├── CTS/
-├── Routing/         
-├── Signoff/           
-│   ├── DRC/           # Design Rule Check reports and files
-│   ├── LVS/           # Layout vs Schematic check reports and files
-│   ├── STA/           # Static Timing Analysis reports and files
-│   ├── Antenna/       # Antenna check reports
-│   └── SPEF/          # Extracted Standard Parasitic Exchange Format files
-├── Results/
-```
-
+1. Interactive Mode
+This mode allows users to execute each stage of the design flow step by step, providing flexibility and control over the process.
+Useful for debugging and understanding the design flow.
