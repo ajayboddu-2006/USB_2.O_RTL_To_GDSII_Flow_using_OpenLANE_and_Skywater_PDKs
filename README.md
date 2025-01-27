@@ -1,7 +1,7 @@
 # RTL to GDSII Flow
 
 ## Overview
-This repository demonstrates the complete ASIC design flow from RTL (Register Transfer Level) to GDSII using open-source tools like OpenLane, Yosys, Magic, and KLayout. The project follows a structured approach covering synthesis, floorplanning, placement, routing, and signoff steps, leading to the final GDSII layout.
+"This repository demonstrates the implementation of the RTL-to-GDSII flow for **High speed USB 2.0 device**, using open-source tool **OpenLANE**. The project covers all key steps, including synthesis, floorplanning, placement, routing, and signoff, leading to the final GDSII layout.
 
 ## Objectives
 - Understand and implement the RTL to GDSII flow.
@@ -66,14 +66,6 @@ RTL-to-GDSII-Flow/
 └── scripts/           # Automation scripts for the flow
 ```
 
-## Flow Overview
-1. **RTL Design**: Write the Verilog code for the design and verify functionality using a testbench.
-2. **Synthesis**: Convert the RTL code into a gate-level netlist using Yosys.
-3. **Floorplanning**: Define chip dimensions, I/O pin placement, and macro placement.
-4. **Placement**: Place standard cells and macros on the floorplan.
-5. **Routing**: Connect all components with metal layers.
-6. **Signoff**: Perform DRC, LVS, and timing checks to ensure the design is fabrication-ready.
-7. **GDSII Generation**: Export the final layout in GDSII format.
 
 ## How to Use
 1. Clone this repository:
