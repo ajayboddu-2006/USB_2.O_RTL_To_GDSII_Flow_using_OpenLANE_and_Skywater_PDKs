@@ -7,3 +7,8 @@ This document outlines the complete RTL-to-GDSII flow implemented for a **High-S
 - To implement the ASIC design flow for a **High-Speed USB 2.0 device** while adhering to USB 2.0 specifications.
 - To demonstrate each step of the flow, including **synthesis**, **floorplanning**, **placement**, **routing**, and **signoff**.
 - To showcase the integration of open-source tools like **OpenLANE**, **Yosys**, **Magic**, and **KLayout** into a comprehensive design pipeline.
+
+## OpenLane Project Directory Structure
+
+The **OpenLane** project directory is organized to facilitate the complete ASIC design flow. Below is a typical directory structure with a brief explanation of each component:
+
