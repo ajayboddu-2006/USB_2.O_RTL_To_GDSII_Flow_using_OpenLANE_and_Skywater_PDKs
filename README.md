@@ -75,13 +75,7 @@ RTL-to-GDSII-Flow/
    ```
 2. Install the required tools (Yosys, OpenLane, Magic, etc.).
 3. Follow the step-by-step instructions in the `docs/` folder for each stage of the flow.
-4. Run the provided scripts in the `scripts/` directory to automate the flow.
 
-## Results
-- **Area**: [Add area details]
-- **Timing**: [Add timing results]
-- **Power**: [Add power consumption details]
-- **Final GDSII**: Located in the `results/` directory.
 
 ## Documentation
 Detailed documentation for each step of the flow is available in the `docs/` folder, including:
@@ -94,6 +88,6 @@ Detailed documentation for each step of the flow is available in the `docs/` fol
 - SkyWater PDK for the 130nm process
 - Open-source EDA tools community
 
-## Contributing
+## Contributions
 Contributions are welcome! Feel free to fork this repository, submit issues, or open pull requests to enhance the flow.
 
