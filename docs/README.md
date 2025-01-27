@@ -11,7 +11,7 @@ This document outlines the complete RTL-to-GDSII flow implemented for a **High-S
 ## OpenLane Project Directory Structure
 
 The **OpenLane** project directory is organized to facilitate the complete ASIC design flow. Below is a typical directory structure with a brief explanation of each component:
-
+```
 RTL-to-GDSII-Flow/
 ├── README.md          
 ├── docs/              
@@ -28,5 +28,5 @@ RTL-to-GDSII-Flow/
 │   ├── Antenna/       # Antenna check reports
 │   └── SPEF/          # Extracted Standard Parasitic Exchange Format files
 ├── Results/
-
+```
 
