@@ -7,47 +7,48 @@ This repository demonstrates the complete ASIC design flow from RTL (Register Tr
 - Understand and implement the RTL to GDSII flow.
 - Optimize the design for area, power, and performance.
 - Generate clean GDSII files with successful DRC and LVS signoff.
-OpenLane: Complete ASIC design flow automation, integrating multiple tools such as:
 
-yosys: Performs RTL synthesis.
+  
+## OpenLANE Design Stages
 
-abc: Handles technology mapping.
+OpenLANE flow consists of several stages. By default, all flow steps are run in sequence. Each stage may consist of multiple sub-stages. We can run Openlane in interactive mode also.
 
-OpenSTA: Executes static timing analysis to generate timing reports.
+1. **Synthesis**
+    - **yosys**: Performs RTL synthesis.
+    - **abc**: Handles technology mapping.
+    - **OpenSTA**: Performs static timing analysis on the resulting netlist to generate timing reports.
 
-init_fp: Defines the core area, rows, and tracks for the floorplan.
+2. **Floorplan and PDN**
+    - **init_fp**: Defines the core area for the macro, the rows (used for placement), and the tracks (used for routing).
+    - **ioplacer**: Places the macro input and output ports.
+    - **pdn**: Generates the power distribution network.
+    - **tapcell**: Inserts welltap and decap cells in the floorplan.
 
-ioplacer: Places the macro input and output ports.
+3. **Placement**
+    - **RePLace**: Performs global placement.
+    - **Resizer**: Performs optional optimizations on the design.
+    - **OpenPhySyn**: Performs timing optimizations on the design.
+    - **OpenDP**: Performs detailed placement to legalize the globally placed components.
 
-pdn: Generates the power distribution network.
+4. **CTS**
+    - **TritonCTS**: Synthesizes the clock distribution network (the clock tree).
 
-tapcell: Inserts welltap and decap cells into the floorplan.
+5. **Routing**
+    - **FastRoute**: Performs global routing to generate a guide file for the detailed router.
+    - **CU-GR**: Another option for performing global routing.
+    - **TritonRoute**: Performs detailed routing.
+    - **SPEF-Extractor**: Performs SPEF extraction for post-routing analysis.
 
-RePLace: Executes global placement.
+6. **GDSII Generation**
+    - **Magic**: Streams out the final GDSII layout file from the routed DEF and performs DRC and antenna checks.
+    - **KLayout**: Streams out the final GDSII layout file as a backup option and provides additional DRC checks.
 
-Resizer: Optimizes the design optionally.
+7. **Checks**
+    - **Magic**: Performs DRC checks and antenna checks.
+    - **KLayout**: Performs additional DRC checks.
+    - **Netgen**: Performs LVS checks.
+    - **CVC**: Verifies circuit validity.
 
-OpenPhySyn: Enhances timing optimizations.
-
-OpenDP: Performs detailed placement to legalize globally placed components.
-
-TritonCTS: Synthesizes the clock distribution network (clock tree).
-
-FastRoute: Conducts global routing to create a guide file for detailed routing.
-
-CU-GR: An alternative for global routing.
-
-TritonRoute: Performs detailed routing.
-
-SPEF-Extractor: Extracts the SPEF for post-routing analysis.
-
-Magic: Streams out the final GDSII layout file and performs DRC and antenna checks.
-
-KLayout: Provides a backup GDSII file generation option and additional DRC checks.
-
-Netgen: Handles LVS (Layout vs. Schematic) checks.
-
-CVC: Verifies the circuit validity.
 
 ## Directory Structure
 ```
