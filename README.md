@@ -53,16 +53,16 @@ OpenLANE flow consists of several stages. By default, all flow steps are run in 
 ## Directory Structure
 ```
 RTL-to-GDSII-Flow/
-├── README.md          # Project overview and instructions
-├── docs/              # Documentation and flow diagrams
-├── rtl/               # RTL design and testbench files
-├── synthesis/         # Synthesis scripts, logs, and reports
-├── floorplan/         # Floorplanning scripts and results
-├── placement/         # Placement results and logs
-├── routing/           # Routing results and logs
-├── signoff/           # DRC, LVS, and STA reports
-├── results/           # Final GDSII and other outputs
-└── scripts/           # Automation scripts for the flow
+├── README.md          
+├── docs/              
+├── RTL/               
+├── Synthesis/         
+├── Floorplan/         
+├── Placement/
+├── CTS      
+├── Routing/         
+├── Signoff/           
+├── Results/               
 ```
 
 
