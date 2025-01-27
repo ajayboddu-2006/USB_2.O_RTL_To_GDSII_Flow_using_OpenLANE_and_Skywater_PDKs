@@ -59,7 +59,7 @@ RTL-to-GDSII-Flow/
 ├── Synthesis/         
 ├── Floorplan/         
 ├── Placement/
-├── CTS      
+├── CTS/
 ├── Routing/         
 ├── Signoff/           
 ├── Results/               
