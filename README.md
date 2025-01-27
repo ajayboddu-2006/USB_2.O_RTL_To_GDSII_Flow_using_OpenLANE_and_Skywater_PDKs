@@ -54,7 +54,6 @@ OpenLANE flow consists of several stages. By default, all flow steps are run in 
 ```
 RTL-to-GDSII-Flow/
 ├── README.md          # Project overview and instructions
-├── LICENSE            # Licensing information
 ├── docs/              # Documentation and flow diagrams
 ├── rtl/               # RTL design and testbench files
 ├── synthesis/         # Synthesis scripts, logs, and reports
