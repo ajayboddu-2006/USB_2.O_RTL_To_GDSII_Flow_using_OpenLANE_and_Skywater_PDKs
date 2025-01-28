@@ -66,3 +66,68 @@ Our design has to  proceed with `6 layers` as per availability shown above.
 In addition to this, inside `usb` directory, we can see another sub directory is created wiith name `runs`. This folder contains all stats of the design including `results` and `reports`. 
 The directroy structure of `runs` is as follows:
 
+```
+usb/
+├── runs/
+│   ├── 25-01_11-17/
+│   |   ├── cmds.log
+│   |   ├── config.tcl
+│   |   ├── logs
+│   |   |   ├── o-prep_runtime.txt
+│   |   |   ├── cts/
+│   |   |   ├── cvc/
+│   |   |   ├── floorplan/
+│   |   |   ├── flow_summary.log
+│   |   |   ├── klayout/
+│   |   |   ├── lvs/
+│   |   |   ├── magic/
+│   |   |   ├── placement/
+│   |   |   ├── routing/
+│   |   |   ├── synthesis/
+│   |   ├── OPENLANE_VERSION
+│   |   ├── PDK_SOURCES
+│   |   ├── reports/
+│   |   |   ├── cts/
+│   |   |   ├── cvc/
+│   |   |   ├── floorplan/
+│   |   |   ├── klayout/
+│   |   |   ├── lvs/
+│   |   |   ├── magic/
+│   |   |   ├── placement/
+│   |   |   ├── routing/
+│   |   |   ├── synthesis/
+│   |   ├── results/
+│   |   |   ├── cts/
+│   |   |   ├── cvc/
+│   |   |   ├── floorplan/
+│   |   |   ├── klayout/
+│   |   |   ├── lvs/
+│   |   |   ├── magic/
+│   |   |   ├── placement/
+│   |   |   ├── routing/
+│   |   |   ├── synthesis/
+│   |   ├── tmp/
+```
+
+Inside `runs`, a sub-directory with name current date and time is created in which we will have log files, reports and results of the respective process during RTL to GDS Flow.
+ ## Synthesis
+As a first step of deisgn flow, run the command `run_synthesis` in the openlane prompt as shown below:
+
+#####################
+
+
+When the `run_synthesis` command is executed in OpenLane, the following processes take place, performed by the respective tools:
+
+- RTL Synthesis
+
+    -Tool: yosys
+        -Yosys converts the high-level RTL (Verilog) design into a gate-level netlist by performing logic synthesis. It optimizes the design based on the constraints and the standard cell library provided.
+    Technology Mapping
+
+Tool: abc
+ABC maps the logic to the specific gates available in the target standard cell library, ensuring that the synthesized design adheres to the technology's requirements.
+Static Timing Analysis (STA)
+
+Tool: OpenSTA
+OpenSTA performs timing analysis on the synthesized netlist to ensure it meets timing constraints. It generates reports detailing the timing paths, slack, and potential violations.
+These steps collectively result in a gate-level netlist (.vg file) optimized for the specified PDK and constraints.
