@@ -322,18 +322,14 @@ When the `run_cts` command is executed in OpenLane, the following processes take
             - During the run_cts command, STA is performed using OpenSTA. This step checks the timing of the entire design, including the newly synthesized clock tree. It verifies that the timing constraints (setup time, hold time, and clock skew) are satisfied after the clock tree is created. It identifies any timing violations and helps ensure that the design meets the required performance.
 ```
 
-Now, After the completion of execution of `cts`, you can see as follows:
+After the command has executed, we can view the layout in both klayout and magic
+Below is the klayout view of the CTS executed layout.
 
-
-#####################
-
-Now, below is the klayout view of the CTS executed layout.
-
-###############
+![CTS](./CTS_images/klayout.png)
 
 To view the layout in magic, follow the similar steps as before. 
 
-################
+![CTS](./CTS_images/magic.png)
 
 Now you can view the `Timing` and `CTS` reports as follows:
 
