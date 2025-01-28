@@ -117,7 +117,7 @@ As a first step of deisgn flow, run the command `run_synthesis` in the openlane 
 
 
 When the `run_synthesis` command is executed in OpenLane, the following processes take place, performed by the respective tools:
-
+```
 - RTL Synthesis
 
     - Tool: yosys
@@ -130,3 +130,6 @@ When the `run_synthesis` command is executed in OpenLane, the following processe
     - Tool: OpenSTA
         - OpenSTA performs timing analysis on the synthesized netlist to ensure it meets timing constraints. It generates reports detailing the timing paths, slack, and potential violations.
         - These steps collectively result in a gate-level netlist (.vg file) optimized for the specified PDK and constraints.
+```
+
+     
