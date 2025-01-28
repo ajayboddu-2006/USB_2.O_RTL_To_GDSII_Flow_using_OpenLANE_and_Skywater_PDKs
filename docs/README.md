@@ -181,21 +181,21 @@ Here we can notice one thing, that in the reports when the design inntroduced ti
 To run floorplanning in openlane, the command is `run_floorplan`. 
 When the `run_floorplan` command is executed in OpenLane, the following processes take place, performed by the respective tools:
 ```
-- Floorplan Initialization
-     - Tool: OpenROAD
-           - OpenROAD initializes the floorplan by defining the chip's area and core dimensions. It places macros, sets up the boundary, and defines initial placement constraints for the design.
+- Define Core Area and Placement Rows
+     - Tool: init_fp
+            - This tool defines the core area where the design will be placed. It also sets up the rows that will be used for standard cell placement.
 
-- Core Utilization
-     - Tool: OpenROAD
-           - OpenROAD calculates the core utilization, ensuring that the chip's area is properly filled with the core logic while adhering to area constraints.
+- Place IO Ports
+     - Tool: ioplacer
+            - The ioplacer tool is responsible for placing the input and output ports of the macros. It positions these ports efficiently within the design to minimize congestion and facilitate routing.
 
-- Row and Track Assignment
-     - Tool: OpenROAD
-           - OpenROAD assigns rows for standard cells and organizes tracks for routing, ensuring that there's an efficient layout for cell placement and wiring.
+- Generate Power Distribution Network (PDN)
+     - Tool: pdn
+            - The pdn tool generates the power distribution network. It places power and ground pads and defines the routing resources for power delivery across the chip.
 
-- Power Planning
-     - Tool: OpenROAD
-           - OpenROAD creates the power grid and power pads, and ensures power delivery to the design by setting up power and ground routing resources.
+- Insert Tap Cells and Decap Cells
+     - Tool: tapcell
+            - The tapcell tool inserts welltap cells (to prevent latch-up) and decap cells (for noise filtering) into the floorplan, ensuring proper power grid integrity.
 
 ```
 
