@@ -114,7 +114,7 @@ Inside `runs`, a sub-directory with name current date and time is created in whi
  ## Synthesis
 As a first step of deisgn flow, run the command `run_synthesis` in the openlane prompt as shown below:
 
-#####################
+![Synthesis](./Synthesis_images/synthesis.png)
 
 
 When the `run_synthesis` command is executed in OpenLane, the following processes take place, performed by the respective tools:
@@ -134,45 +134,66 @@ When the `run_synthesis` command is executed in OpenLane, the following processe
 ```
 After Synthesis was successful, you can see the synthsis file `usb.synthesis.v` has been created inside the `results` directory as shown below
 
-###############
+![Synthesis](./Synthesis_images/synthesis_done.png)
 
 You can open the file and able to view the content as shown below:
 
-#################
+![Synthesis](./Synthesis_images/usb_synth_v.png)
 
 To view the netlist, run the command `yosys` to start the yosys prompt, and inside the yosys prompt run the commands `read_verilog usb.synthesis.v` and `show usb`.
 You can see a netlist view as follows:
 
-##################
+![Synthesis](./Synthesis_images/netlist.png)
 
 By default, the netlist is in `dot` format. To convert it into `pdf` format, run the command `show -format pdf -prefix netlist_usb` inside the yosys prompt. You will find the pdf format of the netlist has been created.
 
-###################
+![Synthesis](./Synthesis_images/pdf_netlist.png)
 
 Now, explore the files inside the `reports` directory, there you will find the reports of `Timing analysis and Synthesis`
 
-######################
+![Synthesis](./Synthesis_images/tns.png)
+
+![Synthesis](./Synthesis_images/sta_1.png)
+
+![Synthesis](./Synthesis_images/sta_2.png)
+
+![Synthesis](./Synthesis_images/sta_3.png)
+
+![Synthesis](./Synthesis_images/sta_4.png)
+
+![Synthesis](./Synthesis_images/sta_5.png)
+
 
 
 After viewing the reports, we found that the `tns - Total negative slack` is `-0.13`, which is a timing violation, and we will not achive the required performance of the design.
 
 So to tackle this issue, let's explore the different `synthesis strategies` of  `Yosys`.
 Note that, the Synthesis Strategy of Yosys is stored in the env variable `SYNTH STRATEGY`
-To know the current `SYNTH_STRATEGY`, run the command `echo $::env(SYNTH_STRATEGY) as shown below.
+To know the current `SYNTH_STRATEGY`, run the command `echo $::env(SYNTH_STRATEGY)` as shown below.
 
-################
+![Synthesis](./Synthesis_images/synth_strategy_old.png)
 
 We can see the current SYNTH_STRATEGY is set to be as `AREA 0`. To address timing issues, set the `SYNTH_STRETEGY` to `DELAY 2` as shown below...
 
-#############
+![Synthesis](./Synthesis_images/synth_strategy_new.png)
 
 Now rerun the synthesis using the command `run_synthesis`
 
-################
+![Synthesis](./Synthesis_images/tns_0.png)
 
 Now we achieved the timing with `tns` and `wns` equal to `0.00`. This is one of the way to tackle timing violations...
 
 Now we can view our Synthsis reports and netlist using `YOSYS`
+
+![Synthesis](./Synthesis_images/sta_1_rpt.png)
+
+![Synthesis](./Synthesis_images/sta_2_rpt.png)
+
+![Synthesis](./Synthesis_images/sta_3_rpt.png)
+
+![Synthesis](./Synthesis_images/sta_4_rpt.png)
+
+![Synthesis](./Synthesis_images/chip_area.png)
 
 Here we can notice one thing, that in the reports when the design inntroduced timing vioation, the chip area is found to be `10054.643200`. After we fix up timing violation by changing the `SYNTH_STRATEGY` to `DELAY 2` , there is an increase in chip area i.e., `11089.385600`. From this we can conclude that, area and timing are trade off to each other. To acheive correct timing behaviour, we have to sacrifice area.
 
