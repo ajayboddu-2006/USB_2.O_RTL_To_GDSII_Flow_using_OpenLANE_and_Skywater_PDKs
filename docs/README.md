@@ -269,19 +269,23 @@ OpenDP performs detailed placement, ensuring that all components are legalized a
 
 After the placement step has executed, you can see as follows:
 
- ###################
+![Placement](./Placement_images/placement.png)
 
 The klayout view of the layout after placement is as follows:
 
-###################
+![Placement](./Placement_images/klayout.png)
 
 To view the layout in magic, run the following command.
 
-#################
+![Placement](./Placement_images/magic_command.png)
 
 To view the physical layers inside magic click on `X`. Then you can view the layout as follows:
 
-#############
+![Placement](./Placement_images/magic.png)
+
+![Placement](./Placement_images/magic_layer.png)
+
+![Placement](./Placement_images/magic_zoom.png)
 
 Now, you can view the Placement related reports as shown below:
 
