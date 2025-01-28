@@ -165,6 +165,7 @@ Now, explore the files inside the `reports` directory, there you will find the r
 
 ![Synthesis](./Synthesis_images/sta_5.png)
 
+![Synthesis](./Synthesis_images/chip_area.png)
 
 
 After viewing the reports, we found that the `tns - Total negative slack` is `-0.13`, which is a timing violation, and we will not achive the required performance of the design.
@@ -195,7 +196,7 @@ Now we can view our Synthsis reports and netlist using `YOSYS`
 
 ![Synthesis](./Synthesis_images/sta_4_rpt.png)
 
-![Synthesis](./Synthesis_images/chip_area.png)
+![Synthesis](./Synthesis_images/area_rpt.png)
 
 Here we can notice one thing, that in the reports when the design inntroduced timing vioation, the chip area is found to be `10054.643200`. After we fix up timing violation by changing the `SYNTH_STRATEGY` to `DELAY 2` , there is an increase in chip area i.e., `11089.385600`. From this we can conclude that, area and timing are trade off to each other. To acheive correct timing behaviour, we have to sacrifice area.
 
