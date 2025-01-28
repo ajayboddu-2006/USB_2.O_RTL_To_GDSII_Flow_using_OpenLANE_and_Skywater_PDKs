@@ -38,6 +38,8 @@ Openlane/
 ```
 
 To start the OpenLANE flow, first open the terminal, and get into the openlane directory as shown below:
+![My Image](./images/my_image.png)
+
 #####################
 
 To start the OpenLANE flow, type `docker` inside the openlane directory. You can check your current directory which is shown as `**OpenLANE_flow**`
