@@ -44,6 +44,11 @@ To start the OpenLANE flow, type **docker** inside the openlane directory. You c
 
 In OpenLane, designs can be run in two primary modes:
 
-1. Interactive Mode
-This mode allows users to execute each stage of the design flow step by step, providing flexibility and control over the process.
-Useful for debugging and understanding the design flow.
+**1. Interactive Mode**
+- This mode allows users to execute each stage of the design flow step by step, providing flexibility and control over the process.
+- Useful for debugging and understanding the design flow.
+
+**2. Autonomous Mode:**
+- This mode runs the entire design flow from RTL to GDSII in a single command.
+- Suitable for quick execution or batch processing of designs.
+
