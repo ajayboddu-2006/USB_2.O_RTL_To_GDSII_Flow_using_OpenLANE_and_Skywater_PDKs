@@ -207,3 +207,8 @@ The klayout view after `floorplanning` is as follows:
 
 To view the layout in `magic`, run the command shown below. To view you will require the `sky130A.tech` file, which is a part of `Sky130A PDKs`.
 
+#############################
+
+## Placement
+
+The next step of VLSI Design Flow is Placement.
