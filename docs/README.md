@@ -258,6 +258,8 @@ Now, you can view the Placement related reports as shown below:
 ## CTS
 
 The next step after Placement is Clock tree synthesis. It defines the clock network for the clock signal from source to the clock pins of the FFs.
+The command to execute `Clock Tree Synthesis` is `run_cts`
+When the `run_CTS` command is executed in OpenLane, the following processes take place, performed by the respective tools:
 
 ```
 - Clock Tree Synthesis
@@ -275,3 +277,34 @@ The next step after Placement is Clock tree synthesis. It defines the clock netw
 - Clock Tree Balancing
       - Tool: TritonCTS
             - The tool ensures that the clock tree is balanced, meaning that the delay from the clock source to each flip-flop is as equal as possible. This step helps improve performance and ensures that the timing is met across the entire design.
+
+- Timing Optimization
+      - Tool: TritonCTS
+            - During the clock tree synthesis, TritonCTS also optimizes the clock tree to reduce delay variations, ensuring all flip-flops receive the clock signal with minimal skew.
+
+- Static Timing Analysis (STA)
+      - Tool: OpenSTA
+            - During the run_cts command, STA is performed using OpenSTA. This step checks the timing of the entire design, including the newly synthesized clock tree. It verifies that the timing constraints (setup time, hold time, and clock skew) are satisfied after the clock tree is created. It identifies any timing violations and helps ensure that the design meets the required performance.
+```
+
+Now, After the completion of execution of `cts`, you can see as follows:
+
+
+#####################
+
+Now, below is the klayout view of the CTS executed layout.
+
+###############
+
+To view the layout in magic, follow the similar steps as before. 
+
+################
+
+Now you can view the `Timing` and `CTS` reports as follows:
+
+#####################
+
+## Routing
+
+The next step is `Routing`. It's one of the most critical step in the VLSI Physical Design which includes two major steps i.e., `Global Routing` and `Detailed Routing`. 
+The command to execute routing is `run_routing`
