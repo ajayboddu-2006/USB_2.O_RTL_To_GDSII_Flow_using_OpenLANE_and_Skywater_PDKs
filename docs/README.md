@@ -226,21 +226,19 @@ When the `run_floorplan` command is executed in OpenLane, the following processe
 
 Run the command `run_floorplan` as shown below:
 
-
-######################
-
+![Floorplan](./Floorplan_images/floorplan.png)
 
 you can view the corresponding results and reports in the runs `directory`. The klayout view after `floorplanning` is as follows:
 
-################
+![Floorplan](./Floorplan_images/klayout_view.png)
 
 To view the layout in `magic`, run the command shown below. To view you will require the `sky130A.tech` file, which is a part of `Sky130A PDKs`.
 
-#############################
+![Floorplan](./Floorplan_images/magic_command.png)
 
 The view of layout after floorplanning in magic is as follows:
 
-##########################
+![Floorplan](./Floorplan_images/magic_view.png)
 
 Now, you can view the Floorplanning related reports in the `reports` directory
 
