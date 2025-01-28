@@ -259,3 +259,19 @@ Now, you can view the Placement related reports as shown below:
 
 The next step after Placement is Clock tree synthesis. It defines the clock network for the clock signal from source to the clock pins of the FFs.
 
+```
+- Clock Tree Synthesis
+      - Tool: TritonCTS
+            - TritonCTS is the tool responsible for synthesizing the clock distribution network (the clock tree). It builds a clock tree that distributes the clock signal from the source (usually the clock pin) to all the flip-flops and clocked elements in the design. The goal is to minimize clock skew and ensure balanced delivery of the clock signal, which is crucial for meeting the timing requirements.
+
+- Buffer Insertion
+      - Tool: TritonCTS
+            - During clock tree synthesis, TritonCTS inserts buffers into the clock tree to ensure the clock signal can drive the entire design without degradation. These buffers help maintain the strength of the clock signal across the chip.
+
+- Skew Minimization and Optimization
+      - Tool: TritonCTS
+            - TritonCTS also optimizes the clock tree to reduce skew, which is the variation in arrival times of the clock signal at different registers. Minimizing clock skew is crucial for ensuring that all registers receive the clock signal at the same time, meeting the timing constraints.
+
+- Clock Tree Balancing
+      - Tool: TritonCTS
+            - The tool ensures that the clock tree is balanced, meaning that the delay from the clock source to each flip-flop is as equal as possible. This step helps improve performance and ensures that the timing is met across the entire design.
