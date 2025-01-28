@@ -56,7 +56,7 @@ In OpenLane, designs can be run in two primary modes:
 RTL to GDS Flow of USB 2.0 is going to be run in an interactive mode in which we are able to notice the changes happenning to the design interactively.
 To run the openlane in interactive mode, run the command `./flow.tcl -interactive` as shown below:
 
-![Openlane_interactive mode](./Openlane_images/interative_flow.png)
+![Openlane_interactive mode](./Openlane_images/interactive_flow.png)
 
 You can see the OpenLANE prompt has started. Now intialize the required package(0.9) required for openlane as follows and run the command `prep -design usb` to intitialize the design for which you want continue the interactive mode of process.
 
