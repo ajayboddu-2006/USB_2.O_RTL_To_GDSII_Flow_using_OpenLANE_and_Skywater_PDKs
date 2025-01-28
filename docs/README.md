@@ -283,7 +283,7 @@ To view the physical layers inside magic click on `X`. Then you can view the lay
 
 ![Placement](./Placement_images/magic.png)
 
-![Placement](./Placement_images/magic_layer.png)
+![Placement](./Placement_images/magic_layers.png)
 
 ![Placement](./Placement_images/magic_zoom.png)
 
