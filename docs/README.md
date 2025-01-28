@@ -356,10 +356,9 @@ Alternatively, CU-GR can be used for global routing. It provides similar functio
           - After routing, SPEF (Standard Parasitic Exchange Format) extraction is performed using the SPEF-Extractor. This step extracts parasitic information from the routed design, including capacitance and resistance values for the wires. This data is crucial for post-routing analysis to evaluate the impact of parasitic effects on the design’s performance, including signal integrity and delay.
 ```
 
+After routing has been executed, you can view the layout and corresponding Reports.
 
-After routing has done, you will have the view as follows:
 
-#####################
 
 The klayout view of the routed layout is as follows:
 
