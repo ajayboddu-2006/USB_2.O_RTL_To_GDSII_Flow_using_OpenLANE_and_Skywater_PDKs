@@ -40,7 +40,7 @@ Openlane/
 To start the OpenLANE flow, first open the terminal, and get into the openlane directory as shown below:
 #####################
 
-To start the OpenLANE flow, type **docker** inside the openlane directory. You can check your current directory which is shown as **OpenLANE_flow**
+To start the OpenLANE flow, type `**docker**` inside the openlane directory. You can check your current directory which is shown as `**OpenLANE_flow**`
 
 In OpenLane, designs can be run in two primary modes:
 
@@ -52,3 +52,5 @@ In OpenLane, designs can be run in two primary modes:
 - This mode runs the entire design flow from RTL to GDSII in a single command.
 - Suitable for quick execution or batch processing of designs.
 
+RTL to GDS Flow of USB 2.0 is going to be run in an interactive mode in which we are able to notice the changes happenning to the design interactively.
+To run the openlane in interactive mode, run the command `**./flow.tcl -interactive**` as shown below:
