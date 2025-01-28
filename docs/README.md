@@ -120,14 +120,13 @@ When the `run_synthesis` command is executed in OpenLane, the following processe
 
 - RTL Synthesis
 
-    -Tool: yosys
-        -Yosys converts the high-level RTL (Verilog) design into a gate-level netlist by performing logic synthesis. It optimizes the design based on the constraints and the standard cell library provided.
-    Technology Mapping
+    - Tool: yosys
+        - Yosys converts the high-level RTL (Verilog) design into a gate-level netlist by performing logic synthesis. It optimizes the design based on the constraints and the standard cell library provided.
+- Technology Mapping
+    - Tool: abc
+        - ABC maps the logic to the specific gates available in the target standard cell library, ensuring that the synthesized design adheres to the technology's requirements.
 
-Tool: abc
-ABC maps the logic to the specific gates available in the target standard cell library, ensuring that the synthesized design adheres to the technology's requirements.
-Static Timing Analysis (STA)
-
-Tool: OpenSTA
-OpenSTA performs timing analysis on the synthesized netlist to ensure it meets timing constraints. It generates reports detailing the timing paths, slack, and potential violations.
-These steps collectively result in a gate-level netlist (.vg file) optimized for the specified PDK and constraints.
+- Static Timing Analysis (STA)
+    - Tool: OpenSTA
+        - OpenSTA performs timing analysis on the synthesized netlist to ensure it meets timing constraints. It generates reports detailing the timing paths, slack, and potential violations.
+        - These steps collectively result in a gate-level netlist (.vg file) optimized for the specified PDK and constraints.
