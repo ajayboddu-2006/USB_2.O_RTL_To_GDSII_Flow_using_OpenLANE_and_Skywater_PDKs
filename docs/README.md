@@ -38,7 +38,8 @@ Openlane/
 ```
 
 To start the OpenLANE flow, first open the terminal, and get into the openlane directory as shown below:
-![My Image](./images/my_image.png)
+
+![Openlane](./openlane_images/openlane.png)
 
 #####################
 
