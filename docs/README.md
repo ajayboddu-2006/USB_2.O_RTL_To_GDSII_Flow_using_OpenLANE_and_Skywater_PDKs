@@ -119,9 +119,9 @@ As a first step of deisgn flow, run the command `run_synthesis` in the openlane 
 When the `run_synthesis` command is executed in OpenLane, the following processes take place, performed by the respective tools:
 ```
 - RTL Synthesis
-
     - Tool: yosys
         - Yosys converts the high-level RTL (Verilog) design into a gate-level netlist by performing logic synthesis. It optimizes the design based on the constraints and the standard cell library provided.
+
 - Technology Mapping
     - Tool: abc
         - ABC maps the logic to the specific gates available in the target standard cell library, ensuring that the synthesized design adheres to the technology's requirements.
@@ -131,5 +131,13 @@ When the `run_synthesis` command is executed in OpenLane, the following processe
         - OpenSTA performs timing analysis on the synthesized netlist to ensure it meets timing constraints. It generates reports detailing the timing paths, slack, and potential violations.
         - These steps collectively result in a gate-level netlist (.vg file) optimized for the specified PDK and constraints.
 ```
+After Synthesis was successful, you can see the synthsis file `usb.synthesis.v` has been created inside the `results` directory as shown below
 
+###############
+
+You can open the file and able to view the content as shown below:
+
+#################
+
+To view the netlist, run the command `yosys` to start the yosys prompt, and inside the yosys prompt run the commands `read_verilog usb.synthesis.v` and `show usb`
      
