@@ -358,16 +358,18 @@ Alternatively, CU-GR can be used for global routing. It provides similar functio
 
 After routing has been executed, you can view the layout and corresponding Reports.
 
-
+![Routing](./Routing_images/routing.png)
 
 The klayout view of the routed layout is as follows:
 
-####################
+![Routing](./Routing_images/layout.png)
 
 
 You can view the similar layout in magic as follows:
 
-#####################
+![Routing](./Routing_images/magic.png)
+
+![Routing](./Routing_images/magic_layer.png)
 
 
 Now, you can view the reports as follows:
