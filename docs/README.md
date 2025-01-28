@@ -39,6 +39,7 @@ Openlane/
 
 To start the OpenLANE flow, first open the terminal, and get into the openlane directory as shown below:
 #####################
+
 To start the OpenLANE flow, type **docker** inside the openlane directory. You can check your current directory which is shown as **OpenLANE_flow**
 
 In OpenLane, designs can be run in two primary modes:
