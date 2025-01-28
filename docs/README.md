@@ -136,6 +136,8 @@ After Synthesis was successful, you can see the synthsis file `usb.synthesis.v` 
 
 ![Synthesis](./Synthesis_images/synthesis_done.png)
 
+![Synthesis](./Synthesis_images/synth_result.png)
+
 You can open the file and able to view the content as shown below:
 
 ![Synthesis](./Synthesis_images/usb_synth_v.png)
