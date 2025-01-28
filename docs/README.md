@@ -224,9 +224,13 @@ When the `run_floorplan` command is executed in OpenLane, the following processe
 
 ```
 
+Run the command `run_floorplan` as shown below:
 
-After the command has executeed, you can view the corresponding results and reports in the runs `directory`.
-The klayout view after `floorplanning` is as follows:
+
+######################
+
+
+you can view the corresponding results and reports in the runs `directory`. The klayout view after `floorplanning` is as follows:
 
 ################
 
@@ -234,7 +238,11 @@ To view the layout in `magic`, run the command shown below. To view you will req
 
 #############################
 
-Now, you can view the Floorplanning related reports as shown below:
+The view of layout after floorplanning in magic is as follows:
+
+##########################
+
+Now, you can view the Floorplanning related reports in the `reports` directory
 
 ## Placement
 
