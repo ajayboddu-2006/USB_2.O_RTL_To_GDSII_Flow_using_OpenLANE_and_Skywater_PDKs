@@ -176,4 +176,26 @@ Now we can view our Synthsis reports and netlist using `YOSYS`
 Here we can notice one thing, that in the reports when the design inntroduced timing vioation, the chip area is found to be `10054.643200`. After we fix up timing violation by changing the `SYNTH_STRATEGY` to `DELAY 2` , there is an increase in chip area i.e., `11089.385600`. From this we can conclude that, area and timing are trade off to each other. To acheive correct timing behaviour, we have to sacrifice area.
 
 
+## Floorplanning
+
+To run floorplanning in openlane, the command is `run_floorplan`. 
+When the `run_floorplan` command is executed in OpenLane, the following processes take place, performed by the respective tools:
+```
+- Floorplan Initialization
+     - Tool: OpenROAD
+           - OpenROAD initializes the floorplan by defining the chip's area and core dimensions. It places macros, sets up the boundary, and defines initial placement constraints for the design.
+
+- Core Utilization
+     - Tool: OpenROAD
+           - OpenROAD calculates the core utilization, ensuring that the chip's area is properly filled with the core logic while adhering to area constraints.
+
+- Row and Track Assignment
+     - Tool: OpenROAD
+           - OpenROAD assigns rows for standard cells and organizes tracks for routing, ensuring that there's an efficient layout for cell placement and wiring.
+
+- Power Planning
+     - Tool: OpenROAD
+           - OpenROAD creates the power grid and power pads, and ensures power delivery to the design by setting up power and ground routing resources.
+
+```
 
