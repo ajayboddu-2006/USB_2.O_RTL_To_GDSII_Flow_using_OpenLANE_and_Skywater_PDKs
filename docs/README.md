@@ -209,6 +209,53 @@ To view the layout in `magic`, run the command shown below. To view you will req
 
 #############################
 
+Now, you can view the Floorplanning related reports as shown below:
+
 ## Placement
 
-The next step of VLSI Design Flow is Placement.
+The next step of VLSI Design Flow is Placement. To execute placement in openlane, te command is `run_placement`.
+When the `run_placement` command is executed in OpenLane, the following processes take place, performed by the respective tools:
+
+```
+Global Placement
+
+Tool: RePLace
+RePLace performs the global placement of cells in the design. It arranges the cells in an initial position based on the timing, area, and congestion constraints, while attempting to minimize wirelength and improve the design’s overall performance.
+Placement Optimization
+
+Tool: Resizer
+Resizer performs optional optimization on the global placement. It adjusts the positions of the cells to improve the design's area, timing, and overall efficiency. This step aims to balance the design's layout, reducing congestion and wirelength.
+Timing Optimization
+
+Tool: OpenPhySyn
+OpenPhySyn is responsible for timing optimization during the placement phase. It adjusts the cell placement to ensure that timing constraints (such as setup and hold time) are met. It also reduces the slack to improve overall performance.
+Detailed Placement and Legalization
+
+Tool: OpenDP
+OpenDP performs detailed placement, ensuring that all components are legalized according to design rules. This step checks and adjusts the placement to meet manufacturing requirements, such as cell spacing and alignment. It ensures that no violations occur in the physical design.
+
+```
+
+After the placement step has executed, you can see as follows:
+
+ ###################
+
+The klayout view of the layout after placement is as follows:
+
+###################
+
+To view the layout in magic, run the following command.
+
+#################
+
+To view the physical layers inside magic click on `X`. Then you can view the layout as follows:
+
+#############
+
+Now, you can view the Placement related reports as shown below:
+
+
+## CTS
+
+The next step after Placement is Clock tree synthesis. It defines the clock network for the clock signal from source to the clock pins of the FFs.
+
