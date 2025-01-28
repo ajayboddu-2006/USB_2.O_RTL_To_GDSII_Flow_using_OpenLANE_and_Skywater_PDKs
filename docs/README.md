@@ -4,7 +4,7 @@
 This document outlines the complete RTL-to-GDSII flow implemented for a **High-Speed USB 2.0 device**. The project demonstrates how open-source tools, primarily **OpenLANE**, can be used to implement a structured ASIC design flow, covering all stages from RTL design to the final GDSII layout.
 
 ## Objectives
-- To implement the ASIC design flow for a **High-Speed USB 2.0 device** while adhering to USB 2.0 specifications.
+- To implement the ASIC design flow for a `High-Speed USB 2.0 device` while adhering to USB 2.0 specifications.
 - To demonstrate each step of the flow, including **synthesis**, **floorplanning**, **placement**, **routing**, and **signoff**.
 - To showcase the integration of open-source tools like **OpenLANE**, **Yosys**, **Magic**, and **KLayout** into a comprehensive design pipeline.
 
@@ -40,7 +40,7 @@ Openlane/
 To start the OpenLANE flow, first open the terminal, and get into the openlane directory as shown below:
 #####################
 
-To start the OpenLANE flow, type `**docker**` inside the openlane directory. You can check your current directory which is shown as `**OpenLANE_flow**`
+To start the OpenLANE flow, type `docker` inside the openlane directory. You can check your current directory which is shown as `**OpenLANE_flow**`
 
 In OpenLane, designs can be run in two primary modes:
 
@@ -53,4 +53,16 @@ In OpenLane, designs can be run in two primary modes:
 - Suitable for quick execution or batch processing of designs.
 
 RTL to GDS Flow of USB 2.0 is going to be run in an interactive mode in which we are able to notice the changes happenning to the design interactively.
-To run the openlane in interactive mode, run the command `**./flow.tcl -interactive**` as shown below:
+To run the openlane in interactive mode, run the command `./flow.tcl -interactive` as shown below:
+
+###############
+
+You can see the OpenLANE prompt has started. Now intialize the required package(0.9) required for openlane as follows and run the command `prep -design usb` to intitialize the design for which you want continue the interactive mode of process.
+
+#############
+
+You can see after this, all LEF files getting merged and showing all related information related to design as above.
+Our design has to  proceed with `6 layers` as per availability shown above.
+In addition to this, inside `usb` directory, we can see another sub directory is created wiith name `runs`. This folder contains all stats of the design including `results` and `reports`. 
+The directroy structure of `runs` is as follows:
+
