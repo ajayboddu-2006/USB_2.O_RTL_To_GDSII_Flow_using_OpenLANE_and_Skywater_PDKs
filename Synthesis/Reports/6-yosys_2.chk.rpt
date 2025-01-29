@@ -1,0 +1,25 @@
+
+27. Executing CHECK pass (checking for obvious problems).
+checking module usb..
+Warning: Wire usb.\usb_rst is used but has no driver.
+Warning: Wire usb.\tx_se0 is used but has no driver.
+Warning: Wire usb.\tx_j is used but has no driver.
+Warning: Wire usb.\tx_en is used but has no driver.
+Warning: Wire usb.\transaction_active is used but has no driver.
+Warning: Wire usb.\success is used but has no driver.
+Warning: Wire usb.\setup is used but has no driver.
+Warning: Wire usb.\endpoint [3] is used but has no driver.
+Warning: Wire usb.\endpoint [2] is used but has no driver.
+Warning: Wire usb.\endpoint [1] is used but has no driver.
+Warning: Wire usb.\endpoint [0] is used but has no driver.
+Warning: Wire usb.\direction_in is used but has no driver.
+Warning: Wire usb.\data_strobe is used but has no driver.
+Warning: Wire usb.\data_out [7] is used but has no driver.
+Warning: Wire usb.\data_out [6] is used but has no driver.
+Warning: Wire usb.\data_out [5] is used but has no driver.
+Warning: Wire usb.\data_out [4] is used but has no driver.
+Warning: Wire usb.\data_out [3] is used but has no driver.
+Warning: Wire usb.\data_out [2] is used but has no driver.
+Warning: Wire usb.\data_out [1] is used but has no driver.
+Warning: Wire usb.\data_out [0] is used but has no driver.
+found and reported 21 problems.
