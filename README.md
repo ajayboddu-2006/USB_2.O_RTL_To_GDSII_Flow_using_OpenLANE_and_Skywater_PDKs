@@ -1,4 +1,4 @@
-# RTL to GDSII Flow
+# RTL to GDSII Flow of USB 2.0
 
 ## Overview
 This repository demonstrates the implementation of the RTL-to-GDSII flow for a High-Speed USB 2.0 device. The USB CoreV design includes features such as a fully-compliant USB 2.0 protocol implementation, support for high-speed (480 Mbps) and full-speed (12 Mbps) modes, an efficient packet processing engine, and a customizable architecture. The project utilizes the open-source tool OpenLANE to cover all critical steps of the ASIC design flow, including synthesis, floorplanning, placement, routing, and signoff, resulting in the final GDSII layout. This implementation highlights the integration of industry-standard USB 2.0 specifications into a structured and efficient open-source design methodology.
