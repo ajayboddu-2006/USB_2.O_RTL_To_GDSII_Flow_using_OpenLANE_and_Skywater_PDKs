@@ -303,7 +303,7 @@ OpenDP performs detailed placement, ensuring that all components are legalized a
 
 ```
 
-During the execution of `placement`, the first task is accomplished by the tool `RePlace` and that is `Global Placement`. And below is the view of the lesign after Global Placement...
+During the execution of `placement`, the first task is accomplished by the tool `RePlace` and that is `Global Placement`. And below is the view of the design after Global Placement...
 
 ![Placement](./Placement_images/replace_output.png)
 
