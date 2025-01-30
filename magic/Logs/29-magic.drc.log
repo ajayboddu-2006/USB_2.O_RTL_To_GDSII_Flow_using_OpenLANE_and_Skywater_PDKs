@@ -1,0 +1,14 @@
+
+Magic 8.3 revision 179 - Compiled on Tue Jun 15 07:12:53 UTC 2021.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130A ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130A Device Generator Menu ...
+Loading "/openLANE_flow/scripts/magic/drc.tcl" from command line.
+Error parsing "/openLANE_flow/scripts/magic/drc.tcl": can't read "::env(CURRENT_GDS)": no such variable
+Using technology "sky130A", version 1.0.141-0-gb9ffc1f
