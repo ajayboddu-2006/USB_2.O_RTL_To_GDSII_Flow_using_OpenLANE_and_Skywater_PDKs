@@ -433,7 +433,7 @@ During the Routing process is going on, there is a need to maintain uniformity i
 
 The klayout view of the routed layout is as follows:
 
-![Routing](./Routing_images/klayout.png)
+![Routing](./Routing_images/kalyout.png)
 
 
 You can view the similar layout in magic as follows:
