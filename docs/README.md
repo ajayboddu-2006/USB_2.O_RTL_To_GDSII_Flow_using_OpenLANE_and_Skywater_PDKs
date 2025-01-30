@@ -316,7 +316,7 @@ For that purpose, the tool `Resizer` performs optimization on Globally placed de
 
 ![Placement](./Placement_images/resizer_output.png)
 
-And After Gobal optimization, Timing optimization and Detailed Placement takes place, whose result is as follws...
+And After Gobal optimization, Timing optimization and Detailed Placement takes place, in a sequence manner and Placement will be completed...
 
 ![Placement](./Placement_images/placement.png)
 
@@ -337,6 +337,15 @@ To view the physical layers inside magic click on `X`. Then you can view the lay
 ![Placement](./Placement_images/magic_zoom.png)
 
 Now, you can view the Placement related reports as shown below:
+
+
+
+
+
+
+
+
+
 
 
 ## CTS
@@ -384,6 +393,15 @@ Now you can view the `Timing` and `CTS` reports as follows:
 
 #####################
 
+
+
+
+
+
+
+
+
+
 ## Routing
 
 The next step is `Routing`. It's one of the most critical step in the VLSI Physical Design which includes two major steps i.e., `Global Routing` and `Detailed Routing`. 
@@ -408,6 +426,10 @@ Alternatively, CU-GR can be used for global routing. It provides similar functio
 After routing has been executed, you can view the layout and corresponding Reports.
 
 ![Routing](./Routing_images/routing.png)
+
+During the Routing process is going on, there is a need to maintain uniformity in whole design to avoid fabrication related issues, for that filler cells are added in the while design. Below is the view of layout after `addspacers` task has completed...
+
+![Routing](./Routing_images/addspacers_output.png)
 
 The klayout view of the routed layout is as follows:
 
