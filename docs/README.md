@@ -114,6 +114,10 @@ Inside `runs`, a sub-directory with name current date and time is created in whi
  ## Synthesis
 As a first step of deisgn flow, run the command `run_synthesis` in the openlane prompt as shown below:
 
+
+
+
+
 ![Synthesis](./Synthesis_images/synthesis.png)
 
 
@@ -206,6 +210,12 @@ Now we can view our Synthsis reports and netlist using `YOSYS`
 Here we can notice one thing, that in the reports when the design inntroduced timing vioation, the chip area is found to be `10054.643200`. After we fix up timing violation by changing the `SYNTH_STRATEGY` to `DELAY 2` , there is an increase in chip area i.e., `11089.385600`. From this we can conclude that, area and timing are trade off to each other. To acheive correct timing behaviour, we have to sacrifice area.
 
 
+
+
+
+
+
+
 ## Floorplanning
 
 To run floorplanning in openlane, the command is `run_floorplan`. 
@@ -293,7 +303,20 @@ OpenDP performs detailed placement, ensuring that all components are legalized a
 
 ```
 
-After the placement step has executed, you can see as follows:
+During the execution of `placement`, the first task is accomplished by the tool `RePlace` and that is `Global Placement`. And below is the view of the lesign after Global Placement...
+
+![Placement](./Placement_images/replace_output.png)
+
+As we know that during Global Placement, the cells are placed but not fixed based at their optimized positions. These cells are placed in the illegal sites i.e., between standard cell rows and with overlapping as shown in below figure... 
+
+![Placement](./Placement_images/replace_op_zoom.png)
+
+There is a need of `Legalization`, in which all Standard cells are allotted with their unique positions.
+For that purpose, the tool `Resizer` performs optimization on Globally placed design. You can view the design after Resizer done its task as follows...
+
+![Placement](./Placement_images/resizer_output.png)
+
+And After Gobal optimization, Timing optimization and Detailed Placement takes place, whose result is as follws...
 
 ![Placement](./Placement_images/placement.png)
 
