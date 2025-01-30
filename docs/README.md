@@ -149,7 +149,8 @@ You can see a netlist view as follows:
 
 Below is the view of `hierarchical netlist` extracted usng `yosys`.
 
-![Synthesis](./Synthesis_images/net.pnglist_yosys.png)
+![Synthesis](./Synthesis_images/netlist_yosys.png)
+
 
 By default, the netlist is in `dot` format. To convert it into `pdf` format, run the command `show -format pdf -prefix netlist_usb` inside the yosys prompt. You will find the pdf format of the netlist has been created.
 
