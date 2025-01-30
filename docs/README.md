@@ -449,3 +449,41 @@ Now, you can view the reports as follows:
 
 
 
+
+
+
+
+# Signoff 
+
+**Signoff checks** are the final verification steps in the ASIC design flow before tape-out. These ensure the design meets all functional, timing, power, and manufacturability requirements.
+
+## **Types of Signoff Checks:**
+
+### **1. Physical Verification**
+- **Design Rule Check (DRC):** Ensures layout follows foundry rules.
+- **Layout vs. Schematic (LVS):** Verifies consistency between netlist and layout.
+- **Antenna Check:** Ensures metal layers do not cause damage during fabrication.
+
+### **2. Timing Verification**
+- **Static Timing Analysis (STA):** Ensures no timing violations.
+- **Clock Domain Crossing (CDC) Checks:** Identifies issues in multi-clock designs.
+
+### **3. Power & Signal Integrity Checks**
+- **IR Drop Analysis:** Ensures sufficient power delivery.
+- **Electromigration (EM) Analysis:** Prevents metal degradation over time.
+- **Noise & Crosstalk Analysis:** Avoids unwanted signal interference.
+
+### **4. Antenna Effect Check**
+- Ensures that metal interconnects do not cause damage during fabrication.
+
+## **Signoff in OpenLANE**
+Run signoff checks using:
+```bash
+run_drc    # Design Rule Check
+run_lvs    # Layout vs. Schematic Check
+run_antenna_check  # Antenna Rule Check
+run_sta    # Static Timing Analysis
+
+
+
+
