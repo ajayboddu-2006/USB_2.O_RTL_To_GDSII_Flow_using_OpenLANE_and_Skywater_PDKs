@@ -476,8 +476,8 @@ Now, you can view the reports as follows:
 ### **4. Antenna Effect Check**
 - Ensures that metal interconnects do not cause damage during fabrication.
 
-## **Signoff in OpenLANE**
-Run signoff checks using:
+### **Signoff in OpenLANE**
+Run signoff checks using  the below commands in Openlane working environment:
 ```bash
 run_drc    # Design Rule Check
 run_lvs    # Layout vs. Schematic Check
@@ -488,4 +488,7 @@ run_sta    # Static Timing Analysis
 The GDS view of our final design is as follows:
 
 ![gds](./GDS_images/usb.gds.png)
+
+Now,  the design is ready to get fabricated, it's always termed as `TAPEOUT` in which the design will get ready to sent to foundary to get fabricated and enter the real world......
+
 
