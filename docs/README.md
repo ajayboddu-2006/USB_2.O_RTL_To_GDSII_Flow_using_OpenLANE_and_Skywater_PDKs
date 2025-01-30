@@ -233,7 +233,15 @@ Run the command `run_floorplan` as shown below:
 
 ![Floorplan](./Floorplan_images/floorplan.png)
 
-you can view the corresponding results and reports in the runs `directory`. The klayout view after `floorplanning` is as follows:
+you can view the corresponding results and reports in the runs `directory`. When we execute the command `run_floorplan`, as a part of the execution, ioplaces defines the positions of the io pads. Below is the view after the `ioplacer` has executed its task...
+
+![Floorplan](./Floorplan_images/ioplacer_output.png)
+
+After `ioplacer` has done its task, now `pdn` comes into actiona you can see the below view as a result of the `pdn` that is formation of Power delivery network.
+
+![Floorplan](./Floorplan_images/pdn_output.png)
+
+After the execution of all inetrmediate processes of floorplanning, you can view the klayout view of your floorplannned as follows...
 
 ![Floorplan](./Floorplan_images/klayout_view.png)
 
@@ -246,6 +254,19 @@ The view of layout after floorplanning in magic is as follows:
 ![Floorplan](./Floorplan_images/magic_view.png)
 
 Now, you can view the Floorplanning related reports in the `reports` directory
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Placement
 
