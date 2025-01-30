@@ -483,7 +483,9 @@ run_drc    # Design Rule Check
 run_lvs    # Layout vs. Schematic Check
 run_antenna_check  # Antenna Rule Check
 run_sta    # Static Timing Analysis
+```
 
+The GDS view of our final design is as follows:
 
-
+![gds](./GDS_images/usb.gds.png)
 
