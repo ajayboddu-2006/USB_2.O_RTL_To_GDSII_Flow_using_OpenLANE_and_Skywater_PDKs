@@ -437,7 +437,13 @@ You can view the similar layout in magic as follows:
 
 Now, you can view the reports as follows:
 
-###################
+![Routing](./Routing_images/routing_rpt_1.png)
+
+![Routing](./Routing_images/routing_rpt_2.png)
+
+![Routing](./Routing_images/routing_rpt_3.png)
+
+![Routing](./Routing_images/routing_rpt_5.png)
 
 
 
