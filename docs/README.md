@@ -328,16 +328,11 @@ Now, you can view the Placement related reports as shown below:
 
 ![Placement](./Placement_images/placement_rpt_1.png)
 
-![Placement](./Placement_imagesplacement_rpt_2.png)
+![Placement](./Placement_images/placement_rpt_2.png)
 
 ![Placement](./Placement_images/placement_rpt_3.png)
 
 ![Placement](./Placement_images/placement_rpt_4.png)
-
-
-
-
-
 
 
 
@@ -385,10 +380,13 @@ To view the layout in magic, follow the similar steps as before.
 
 Now you can view the `Timing` and `CTS` reports as follows:
 
-#####################
+![CTS](./CTS_images/cts_rpt_1.png)
 
+![CTS](./CTS_images/cts_rpt_2.png)
 
+![CTS](./CTS_images/cts_rpt_3.png)
 
+![CTS](./CTS_images/cts_rpt_4.png)
 
 
 
