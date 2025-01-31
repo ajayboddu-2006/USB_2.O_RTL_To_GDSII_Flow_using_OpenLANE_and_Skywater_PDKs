@@ -263,9 +263,11 @@ The view of layout after floorplanning in magic is as follows:
 
 ![Floorplan](./Floorplan_images/magic_view.png)
 
-Now, you can view the Floorplanning related reports in the `reports` directory
+Now, you can view the Floorplanning related reports in the `reports` directory as follows:
 
+![Floorplan](./Floorplan_images/floorplan_rpt_1.png)
 
+![Floorplan](./Floorplan_images/floorplan_rpt_2.png)
 
 
 
