@@ -483,6 +483,9 @@ run_antenna_check  # Antenna Rule Check
 run_sta    # Static Timing Analysis
 ```
 
+
+# GDS
+
 The GDS view of our final design is as follows:
 
 ![gds](./GDS_images/usb.gds.png)
