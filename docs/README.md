@@ -211,11 +211,6 @@ Here we can notice one thing, that in the reports when the design inntroduced ti
 
 
 
-
-
-
-
-
 ## Floorplanning
 
 To run floorplanning in openlane, the command is `run_floorplan`. 
@@ -268,15 +263,6 @@ Now, you can view the Floorplanning related reports in the `reports` directory a
 ![Floorplan](./Floorplan_images/floorplan_rpt_1.png)
 
 ![Floorplan](./Floorplan_images/floorplan_rpt_2.png)
-
-
-
-
-
-
-
-
-
 
 
 
@@ -340,7 +326,13 @@ To view the physical layers inside magic click on `X`. Then you can view the lay
 
 Now, you can view the Placement related reports as shown below:
 
+![Placement](./Placement_images/placement_rpt_1.png)
 
+![Placement](./Placement_imagesplacement_rpt_2.png)
+
+![Placement](./Placement_images/placement_rpt_3.png)
+
+![Placement](./Placement_images/placement_rpt_4.png)
 
 
 
