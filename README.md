@@ -69,7 +69,7 @@ RTL-to-GDSII-Flow/
 ## How to Use
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/RTL-to-GDSII-Flow.git
+   git clone https://github.com/ajayboddu-2006/RTL-to-GDSII-Flow.git
    cd RTL-to-GDSII-Flow
    ```
 2. Install the required tools (Yosys, OpenLane, Magic, etc.).
